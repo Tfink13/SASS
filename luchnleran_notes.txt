@@ -1,0 +1,17 @@
+
+******  Syntactically Awesome Style Sheets  *****
+
+
+Preproccessors
+- A css Preproccessor is a program that lets you generate css from the
+ preproccessors own unique syntx
+
+- many to choose from, and add features that pure css does not have
+
+- goal is to make the code more readable and easier to maintain
+
+
+*** In order to use a Preproccessor you must install a css compiler **
+
+- if you download sass from your command line so then you can run the sass executable
+compile your .scss and .sass files to .css files

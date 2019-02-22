@@ -1,0 +1,81 @@
+@import 'testimport';
+@import 'footer';
+
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  li {
+    border-right: 1px solid black;
+  }
+  a {
+    padding: 6px 12px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+
+section {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  P{
+    font-size: $p-font-size;
+  }
+  div{
+    display: flex;
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// section {
+//   div.box {
+//     width: 100px;
+//     height: 100px;
+//     border: 1px solid black;
+//     @include transform(rotate(45deg))
+//   }
+// }
+//
+
+
+
+%rectangle {
+  border: 1px solid blue;
+  height: 150px;
+  width: 250px;
+}
+
+
+%equal-height {
+  width: 200px;
+  height: 200px;
+  border: 5px solid lightblue;
+}
+
+section.mixin {
+  div.box {
+    width: 100px;
+    height: 100px;
+    @include transform(rotate(45deg));
+    border: 1px solid black;
+  }
+  div.boxtwo {
+    @extend %equal-height;
+  }
+  div.boxthree {
+    @extend %rectangle;
+
+  }
+}
